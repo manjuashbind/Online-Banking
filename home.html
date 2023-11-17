@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+<style>
+    body{
+        background: url('./images/onlinebanking2.webp');
+    }
+</style>
+</head>
+<body class="bg-info-subtle ">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent ">
+        <div class="container-fluid">
+          <a class="navbar-brand text-light" href="#"><img class="me-2" src="./images/bank.avif" width="40px" alt="">State Bank</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          
+              <div >
+                
+                <button onclick="logout()" class="btn btn-danger"><i class="fa-regular fa-user" ></i> Log out</button>
+              </div>
+            
+          </div>
+        </div>
+      </nav>
+    <div class="container mt-3">
+        <div class="col-12 text-center bg-light py-3">
+            <h1 id="head" class="text-primary">Welcome User</h1>
+            <h3 class="text-success">Online Banking Services</h3>
+        </div>
+        <div class="row mx-auto bg-light">
+            <div class="col-6 p-5 text-center ">
+                <h3 class="text-primary ">Deposit</h3>
+                <div class="p-4">
+                    <form id="formdeposit" action="">
+                        <input id="depamt" type="number" class="form-control " placeholder="Enter Amount"><br>
+                        <input id="deppswd" type="password"  class="form-control " placeholder="Enter Your Password"><br>
+                        <button onclick="deposit(event)" class="btn btn-primary border-1 ">Deposit</button>
+                    </form>
+                    <div style="height: 50px;" class="text-danger mt-2 rounded-1 fs-5 fw-bold  " id="depositresult"></div>
+                </div>
+            </div>
+            <div class="col-6 p-5 text-center ">
+                <h3 class="text-primary ">Withdraw</h3>
+                <div class="p-4">
+                    <form id="formwithdraw" action="">
+                        <input id="wamt" type="number"  class="form-control " placeholder="Enter Amount"><br>
+                        <input id="wpswd" type="password"  class="form-control " placeholder="Enter Your Password"><br>
+                        <button onclick="withdraw(event)" class="btn btn-primary border-1 ">Withdraw</button>
+                    </form>
+                    <div style="height: 50px;" class="text-danger mt-2 rounded-1 fs-5 fw-bold "  id="withdrawresult"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script src="./script.js"></script>
+</html>
